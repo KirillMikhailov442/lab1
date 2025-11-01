@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -5,10 +7,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Main main = new Main();
 
-        System.out.println("Введите номер задания:");
+        System.out.print("Введите номер задания: ");
         int task = scanner.nextInt();
 
-        System.out.println("Введите номер подзадания:");
+        System.out.print("Введите номер подзадания: ");
         int subtask = scanner.nextInt();
 
         switch (task) {
@@ -33,6 +35,7 @@ public class Main {
                         System.out.println(res);
                         res = main.isDivisor(2, 15);
                         System.out.println(res);
+                        break;
                     }
 
                     case 9: {
@@ -40,11 +43,13 @@ public class Main {
                         System.out.println(res);
                         res = main.isEqual(2, 15, 2);
                         System.out.println(res);
+                        break;
                     }
 
                     case 10: {
-                        int res = main.lastNumSum(5 + 11, 6);
+                        int res = main.lastNumSum(5, 11);
                         System.out.println(res);
+                        break;
                     }
 
                     default:
@@ -56,7 +61,7 @@ public class Main {
             case 2:
                 switch (subtask) {
                     case 2: {
-                        double res = main.safeDiv(5, 0);
+                        double res = main.safeDiv(8, 2);
                         System.out.println(res);
                         break;
                     }
@@ -64,20 +69,24 @@ public class Main {
                     case 5: {
                         int res = main.max3(5, 7, 7);
                         System.out.println(res);
+                        break;
                     }
 
                     case 6: {
                         boolean res = main.sum3(5, 7, 2);
                         System.out.println(res);
+                        break;
                     }
 
                     case 7: {
                         int res = main.sum2(5, 7);
                         System.out.println(res);
+                        break;
                     }
 
                     case 10: {
                         main.printDays("четверг");
+                        break;
                     }
 
                     default:
@@ -85,6 +94,7 @@ public class Main {
                         System.exit(0);
                         break;
                 }
+                break;
             case 3:
                 switch (subtask) {
                     case 1: {
@@ -106,7 +116,7 @@ public class Main {
                     }
 
                     case 7: {
-                        main.equalNum(2);
+                        main.square(2);
                         break;
                     }
 
@@ -120,6 +130,7 @@ public class Main {
                         System.exit(0);
                         break;
                 }
+                break;
             case 4:
                 switch (subtask) {
                     case 1: {
@@ -140,7 +151,7 @@ public class Main {
                         int[] arr = { 1, 2, 3, 4, 5 };
                         int[] s = { 7, 8, 9 };
                         int[] res = main.add(arr, s, 3);
-                        System.out.println(res);
+                        System.out.println(Arrays.toString(res));
                         break;
                     }
 
@@ -148,14 +159,14 @@ public class Main {
                         int[] arr1 = { 1, 2, 3 };
                         int[] arr2 = { 7, 8, 9 };
                         int[] res = main.concat(arr1, arr2);
-                        System.out.println(res);
+                        System.out.println(Arrays.toString(res));
                         break;
                     }
 
                     case 10: {
                         int[] arr = { 1, 2, -3, 4, -2, 2, -5 };
                         int[] res = main.deleteNegative(arr);
-                        System.out.println(res);
+                        System.out.println(Arrays.toString(res));
                         break;
                     }
 
@@ -164,6 +175,11 @@ public class Main {
                         System.exit(0);
                         break;
                 }
+                break;
+            default:
+                System.out.println("Такой задачи нету");
+                System.exit(0);
+                break;
         }
 
     }
