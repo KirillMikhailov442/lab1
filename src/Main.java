@@ -223,7 +223,7 @@ public class Main {
      * Задание 10
      */
     public int lastNumSum(int a, int b) {
-        return (a + b) % 10;
+        return (a % 10) + (b % 10);
     }
 
     /**

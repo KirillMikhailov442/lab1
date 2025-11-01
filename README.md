@@ -37,7 +37,7 @@ public boolean isEqual(int a, int b, int c) {
 ## Подзадача 10
 ```java
 public int lastNumSum(int a, int b) {
-        return (a + b) % 10;
+        return (a % 10) + (b % 10);
     }
 ```
 
