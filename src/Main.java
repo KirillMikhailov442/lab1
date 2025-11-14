@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -7,10 +6,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Main main = new Main();
 
-        System.out.print("Введите номер задания: ");
+        System.out.print("Введите номер задание: ");
         int task = scanner.nextInt();
-
-        System.out.print("Введите номер подзадания: ");
+        System.out.print("Введите номер подзадание: ");
         int subtask = scanner.nextInt();
 
         switch (task) {
@@ -85,7 +83,7 @@ public class Main {
                     }
 
                     case 10: {
-                        main.printDays("четверг");
+                        main.printDays("Четверг");
                         break;
                     }
 
@@ -275,7 +273,7 @@ public class Main {
      * Задание 10
      */
     public void printDays(String x) {
-        switch (x) {
+        switch (x.toLowerCase()) {
             case "понедельник":
                 System.out.println("понедельник");
             case "вторник":
